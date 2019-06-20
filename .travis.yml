@@ -7,9 +7,9 @@ cache:
 jobs:
     include:
         - stage: test
-          script: npm test
+          script: yarn test
         - stage: build
-          script: npm run build
+          script: yarn build
 on:
     branch: master
 deploy:
