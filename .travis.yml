@@ -7,13 +7,13 @@ cache:
 jobs:
     include:
         - stage: test
-        script: npm test
+            script: npm test
         - stage: build
-        script: npm run build
+            script: npm run build
         - stage: deploy
-        deploy:
-            provider: heroku
-            api_key: $HEROKU_KEY
-            app: $HEROKU_APP
+            deploy:
+                provider: heroku
+                api_key: $HEROKU_KEY
+                app: $HEROKU_APP
 on:
     branch: master
